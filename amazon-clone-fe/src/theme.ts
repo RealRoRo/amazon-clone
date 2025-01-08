@@ -14,6 +14,33 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
+  palette: {
+    primary: {
+      light: "#2162a1",
+      main: "#232F3E",
+      dark: "#131921",
+    },
+    secondary: {
+      main: "#FF5049",
+    },
+    common: { black: "#000", white: "#fff" },
+    yellow: { light: "#febd69", main: "#ffd814", dark: "#ffa41c" },
+    green: { main: "#7fda69" },
+    blue: { light: "#007185", main: "#2162a1" },
+    red: { light: "#CC0C39", main: "#b12704" },
+    grey: {
+      "100": "e6e6e6",
+      "200": "#DDDDDD",
+      "300": "#CCCCCC",
+      "400": "#999999",
+      "500": "#565959",
+      "600": "#333333",
+      "700": "#111111",
+      "800": "#111111", // not using
+      "900": "#0F1111",
+    },
+    text: { primary: "#0F1111", secondary: "#565959" },
+  },
 });
 
 export default theme;
