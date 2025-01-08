@@ -1,7 +1,7 @@
 import React from "react";
 
 import { IconType } from "./types";
-import AmazonLogo from "../../../public/assets/icons/AmazonLogo.svg";
+import AmazonLogo from "../../../../public/assets/icons/AmazonLogo.svg";
 
 export interface Props {
   /**
