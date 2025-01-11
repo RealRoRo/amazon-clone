@@ -1,9 +1,18 @@
-import { Box, Button } from "@mui/material";
+"use client";
+import { Box } from "@mui/material";
+import { useState } from "react";
+import SearchBar from "@/components/molecules/searchBar/SearchBar";
 
 export default function Home() {
+  const [name, setName] = useState("");
   return (
     <Box>
-      <Button variant="contained">next and mui conf done</Button>
+      <SearchBar
+        setSearchValue={setName}
+        onSearch={() => {
+          console.log(name);
+        }}
+      />
     </Box>
   );
 }

@@ -2,8 +2,9 @@ import React from "react";
 
 import { IconType } from "./types";
 import AmazonLogo from "../../../../public/assets/icons/AmazonLogo.svg";
+import Search from "../../../../public/assets/icons/Search.svg";
 
-export interface Props {
+interface Props {
   /**
    * Icon width
    */
@@ -30,6 +31,9 @@ const Icon: React.FC<Props> = ({ width, height, type, fill }) => {
   switch (type) {
     case IconType.AMAZON_LOGO:
       iconComponent = <AmazonLogo width={width} height={height} fill={fill} />;
+      break;
+    case IconType.SEARCH:
+      iconComponent = <Search width={width} height={height} fill={fill} />;
       break;
     default:
       iconComponent = null;
