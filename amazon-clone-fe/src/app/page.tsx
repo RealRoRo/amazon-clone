@@ -1,21 +1,17 @@
 "use client";
 import { Box } from "@mui/material";
 import { useState } from "react";
-import InputField from "@/components/atoms/inputField/InputField";
-import CustomButton from "@/components/atoms/button/Button";
+import SearchBar from "@/components/molecules/searchBar/SearchBar";
 
 export default function Home() {
   const [name, setName] = useState("");
-  console.log(name);
   return (
     <Box>
-      <InputField placeholder="Enter your name" setValue={setName} />
-      <CustomButton
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
+      <SearchBar
+        setSearchValue={setName}
+        onSearch={() => {
+          console.log(name);
         }}
-        label={"Hello"}
-        color="yellowLight"
       />
     </Box>
   );

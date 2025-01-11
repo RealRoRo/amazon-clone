@@ -52,6 +52,11 @@ const theme = createTheme({
   },
   components: {
     MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+        disableFocusRipple: true,
+        disableRipple: true,
+      },
       styleOverrides: {
         root: ({
           ownerState,
@@ -77,6 +82,9 @@ const theme = createTheme({
               backgroundColor: theme.palette.yellowHover.main,
             },
           }),
+          boxShadow: "none",
+          "&:hover": { boxShadow: "none" },
+          minWidth: "0px",
         }),
       },
     },

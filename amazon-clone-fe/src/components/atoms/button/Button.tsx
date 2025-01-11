@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 interface CustomButtonProps {
   onClick: () => void;
-  label: string;
+  children: React.ReactNode;
   color?: "inherit" | "yellow" | "yellowLight" | "yellowDark";
   variant?: "text" | "outlined" | "contained";
   disabled?: boolean;
@@ -18,10 +18,9 @@ interface CustomButtonProps {
     "hover:border"?: string;
   };
 }
-
 const CustomButton: React.FC<CustomButtonProps> = ({
   onClick,
-  label,
+  children,
   color = "yellow",
   variant = "contained",
   disabled = false,
@@ -35,7 +34,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       disabled={disabled}
       sx={sx}
     >
-      {label}
+      {children}
     </Button>
   );
 };
