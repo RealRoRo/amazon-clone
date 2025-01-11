@@ -1,4 +1,4 @@
-import CustomButton from "@/components/atoms/button/Button";
+import Button from "@/components/atoms/button/Button";
 import Icon from "@/components/atoms/icon/Icon";
 import { IconType } from "@/components/atoms/icon/types";
 import { InputBase, Paper } from "@mui/material";
@@ -36,7 +36,7 @@ const SearchBar: FC<Props> = ({ setSearchValue, onSearch }) => {
         inputProps={{ "aria-label": "search amazon.in" }}
         onChange={(event) => setSearchValue(event.target.value)}
       />
-      <CustomButton
+      <Button
         variant="contained"
         color="yellowLight"
         sx={{
@@ -48,7 +48,7 @@ const SearchBar: FC<Props> = ({ setSearchValue, onSearch }) => {
         onClick={onSearch}
       >
         <Icon width={26} height={26} type={IconType.SEARCH} />
-      </CustomButton>
+      </Button>
     </Paper>
   );
 };

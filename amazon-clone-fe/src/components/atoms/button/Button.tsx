@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import { Button as MuiButton } from "@mui/material";
 
 interface CustomButtonProps {
   onClick: () => void;
@@ -18,7 +18,7 @@ interface CustomButtonProps {
     "hover:border"?: string;
   };
 }
-const CustomButton: React.FC<CustomButtonProps> = ({
+const Button: React.FC<CustomButtonProps> = ({
   onClick,
   children,
   color = "yellow",
@@ -27,7 +27,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   sx,
 }) => {
   return (
-    <Button
+    <MuiButton
       onClick={onClick}
       color={color}
       variant={variant}
@@ -35,8 +35,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       sx={sx}
     >
       {children}
-    </Button>
+    </MuiButton>
   );
 };
 
-export default CustomButton;
+export default Button;
