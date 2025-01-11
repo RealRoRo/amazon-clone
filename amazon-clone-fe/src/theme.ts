@@ -88,6 +88,13 @@ const theme = createTheme({
         }),
       },
     },
+    MuiPopover: {
+      styleOverrides: {
+        root: {
+          pointerEvents: "none",
+        },
+      },
+    },
   },
 });
 
